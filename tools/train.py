@@ -31,7 +31,8 @@ def get_args() -> Namespace:
     """
     parser = ArgumentParser()
     parser.add_argument("--model", type=str, default="padim", help="Name of the algorithm to train/test")
-    parser.add_argument("--config", type=str, required=False, help="Path to a model config file")
+    parser.add_argument("--config", type=str, default=r'D:\code\anomalib\anomalib\models\padim\config.yaml', help="Path to a model config file")
+    # parser.add_argument("--config", type=str, required=False, help="Path to a model config file")
     parser.add_argument("--log-level", type=str, default="INFO", help="<DEBUG, INFO, WARNING, ERROR>")
 
     args = parser.parse_args()
